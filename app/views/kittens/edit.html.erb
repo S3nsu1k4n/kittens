@@ -1,3 +1,11 @@
 <h1>Edit kitten</h1>
 
+<ul>
+  <li><%= link_to 'back', kitten_path(@kitten) %></li>
+  <li><%= link_to 'delete', kitten_path(@kitten), data:{
+    turbo_method: :delete,
+    turbo_confirm: 'Are you sure?'
+  } %></li>
+</ul>
+
 <%= render 'form' %>
