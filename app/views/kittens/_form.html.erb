@@ -2,15 +2,19 @@
   <%= form_with model: @kitten do |form| %>
     <%= form.label :name %>
     <%= form.text_field :name, placeholder: 'Minka' %>
+    <%= render 'error', field: :name %>
     <br>
     <%= form.label :age %>
     <%= form.number_field :age, placeholder: 2 %>
+    <%= render 'error', field: :age %>
     <br>
     <%= form.label :cuteness %>
     <%= form.number_field :cuteness, placeholder: 10 %>
+    <%= render 'error', field: :cuteness %>
     <br>
     <%= form.label :softness %>
     <%= form.number_field :softness, placeholder: 8 %>
+    <%= render 'error', field: :softness %>
     <br>
     <%= form.submit %>
   <% end %>
