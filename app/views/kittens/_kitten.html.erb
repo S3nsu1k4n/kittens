@@ -1,5 +1,5 @@
 <div>
-  <p><strong><%= kitten.name %></strong></p>
+  <p><strong><%= link_to kitten.name, kitten_path(kitten.id) %></strong></p>
   <ul>
     <li>Age: <%= kitten.age %></li>
     <li>Cutenss: <%= kitten.cuteness %></li>

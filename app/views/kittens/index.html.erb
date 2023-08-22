@@ -4,4 +4,8 @@
   <li><%= link_to 'New', new_kitten_path %></li>
 </ul>
 
-<div class="kitten-list"></div>
+<div class="kitten-list">
+  <% @kittens.each do |kitten| %>
+    <%= render "kitten", kitten: kitten %>
+  <% end %>
+</div>
